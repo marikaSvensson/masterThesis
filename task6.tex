@@ -1,0 +1,80 @@
+\begin{frame}
+\frametitle{Task 6: Theory}
+\begin{equation}
+Pattern_{radiation}^{tot} = (\text{element radiation pattern})\times(AF)
+\end{equation}
+\begin{align}
+& AF =  1 + e^{j(kd\cdot 1 cos(\theta) +\alpha)}  + ... + e^{j\cdot(N-1)(kdcos(\theta) +\alpha)}= \\
+& e^{j(N-1)\Psi/2}sin(N\Psi/2)/ sin(\Psi/2) \Rightarrow |AF| = sin(N\Psi/2)/( N sin(\Psi/2) )
+\end{align}
+with $\Psi = \alpha + kdcos\theta$.  Element Pattern of horizontal dipole
+\begin{equation}
+f = \sqrt{1-sin(\theta)cos(\phi)}
+\end{equation}
+
+
+\begin{equation}
+|AF|_{max} =AF(\Psi =0) \Rightarrow \alpha = kdcos(\theta_0)
+\end{equation}
+
+$\theta_0$ is called the steering angle.
+
+H-plane: $\alpha = kdcos(\theta_0) =kd$,
+Broadside :  $\alpha =0$
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Task 6a: Results}
+\begin{columns}[c]
+
+
+
+\column{.45\textwidth}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{/Users/marikasvensson/Documents/MATLAB/MicroProject/finished/task6/6a/ypolAF.png}
+\caption{This figure shows $|AF|$ as a function of $\theta$ for y polarized dipoles}
+\label{task6a:ypolAF}
+\end{figure}
+
+
+\column{.5\textwidth} % Right column and width
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{/Users/marikasvensson/Documents/MATLAB/MicroProject/finished/task6/6a/ypolHplanePattern.png}
+\caption{This figure shows the far field pattern as a function of $\theta$in the H-plane}
+\label{task6a:ypol}
+\end{figure}
+\end{columns}
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Task 6b: Results}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{/Users/marikasvensson/Documents/MATLAB/MicroProject/finished/task6/6b/ypolbroad.png}
+\caption{This figure shows the far field pattern as a function of $\theta$ for y polarized dipoles in arrays}
+\label{task6b:ypol}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{/Users/marikasvensson/Documents/MATLAB/MicroProject/finished/task6/6b/ypolAF.png}
+\caption{This figure shows $|AF|$ as a function of $\theta$ for y polarized dipoles}
+\label{task6b:ypolAF}
+\end{figure}
+\end{frame}
+
+
