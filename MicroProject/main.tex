@@ -1,0 +1,133 @@
+\documentclass[12pt,a4paper, oneside]{book}
+\usepackage{a4wide}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
+\usepackage[american]{babel}
+\usepackage{cite}
+\usepackage{array}
+\usepackage{theorem}
+\usepackage{mathrsfs}
+\usepackage{hvdashln}
+\usepackage{arydshln}
+\usepackage{amsmath,amsfonts,amssymb,bbm}
+\usepackage{fancyhdr}
+\usepackage{pstricks}
+\usepackage{rotating}
+\usepackage{courier}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{verbatim}
+%\usepackage{multirow}
+
+\definecolor{listinggray}{gray}{0.98}
+\definecolor{lbcolor}{rgb}{0.98,0.98,0.98}
+\usepackage{listings}
+\lstset{
+    fancyhdr,
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=matlab,
+    basicstyle=\scriptsize\ttfamily,
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    columns=fixed,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    identifierstyle=\ttfamily,
+    keywordstyle=\color[rgb]{0,0,1},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+\newcommand{\N}{\ensuremath{\mathbbm{N}}}
+\newcommand{\Z}{\ensuremath{\mathbbm{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbbm{Q}}}
+\newcommand{\R}{\ensuremath{\mathbbm{R}}}
+\newcommand{\C}{\ensuremath{\mathbbm{C}}}
+\newcommand{\rd}{\ensuremath{\mathrm{d}}}
+\newcommand{\id}{\ensuremath{\,\rd}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+%=============================
+%fancy headings
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\nouppercase{\rmfamily\small\textbf\thepage}}]%
+      {\fancyplain{}{\nouppercase{\rmfamily\small\textbf\rightmark}}}
+\rhead[\fancyplain{}{\nouppercase{\rmfamily\small\textbf\leftmark}}]
+      {\fancyplain{}{\nouppercase{\rmfamily\small\textbf\thepage}}}
+\cfoot{}
+%=============================
+
+\newcommand{\dee}{\,\textrm{d}}
+\newcommand{\mv}[1]{\boldsymbol{\mathsf{#1}}} % for matlab matrices and vectors
+\newcommand{\pv}[1]{\boldsymbol{#1}} % for physical vectors (3 elements)
+
+\newcommand{\courier}[1]{{\fontfamily{pcr}\selectfont #1}}
+\newdimen\ptsize
+\ptsize=12pt
+
+\hdashlinewidth=2pt
+\hdashlinegap=2pt
+
+\renewcommand{\baselinestretch}{1.2}
+\parindent=0pt
+
+\setlength{\hoffset}{-5pt} \setlength{\oddsidemargin}{20pt}
+\setlength{\evensidemargin}{-20pt}
+
+\setlength{\parskip}{\baselineskip}
+
+\begin{document}
+\selectlanguage{american}
+% \include{abstract4Paper}
+\pagenumbering{roman}
+\include{titlepages}
+\include{abstract}
+\tableofcontents
+\cleardoublepage
+\clearpage
+% \include{Symbols}
+% \thispagestyle{plain}
+%\include{Acronyms}
+\pagenumbering{arabic}
+%\include{MicroProject}
+\include{introduction}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{discussion}
+
+\appendix
+
+\include{appenda}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,refs}
+%\bibliographystyle{plain}
+%\bibliography{refs}
+\end{document}
+
+
+http://www.antenna-theory.com/
+
+http://www.kyes.com/antenna/navy/freq-phase/freqphas.htm
+
+http://www.ece.mcmaster.ca/faculty/nikolova/antenna_dload/current_lectures/L13_Arrays1.pdf
+
+
+http://www.diva-portal.org/smash/get/diva2:211543/FULLTEXT02.pdf
+
+
+http://www.ece.rutgers.edu/~orfanidi/ewa/

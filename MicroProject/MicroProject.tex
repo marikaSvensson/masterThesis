@@ -1,0 +1,52 @@
+\chapter{Micro Project}\label{Chap1}
+\section{Objectives}
+A one-week project with the aim to assess the MATLAB programming experience and the antenna array knowledge of the MSc student candidate.
+
+\section{Tasks}
+\begin{enumerate}
+\item Write a MATLAB function that computes the far field function of a short electrical dipole antenna placed $\lambda/4$ above a PEC ground plane.
+\\Input parameters: $\theta$ and $\phi$ observation angles, excitation current $I$.
+\\Output parameters: vector far-field function $\pv{G}(\theta,\phi)=G_\theta(\theta,\phi)\pv{\hat{\theta}}+G_\phi(\theta,\phi)\pv{\hat{\phi}}$.
+\\ \emph{Hint: cf. chapter 5.1.13}
+\item Write a MATLAB function that computes the total radiated power through numerical integration.
+\\Input parameters: far-field function $\pv{G}(\theta,\phi)$.
+\\Output parameters: the radiated power $P_{\text{rad}}$.
+\\\emph{Hint: cf. chapter 2.3.8}
+\item Write a MATLAB function that plots the normalized far-field pattern in dBi for the E- and H-plane cuts.
+\\Input parameters: $\pv{G}(\theta,\phi)$, observation angles.
+\\Output parameters: a plot of the power pattern E- and H-plane cuts in dBi.
+\\\emph{Hint: for the normalization in dBi you will need $P_{\text{rad}}$, cf. chapter 2.3.9}
+\item Write a MATLAB function that computes the far-field function of an $N$-element dipole antenna array.
+\\ Input parameters: matrix with antenna positions
+\begin{align}
+\left[
+\begin{matrix}
+x_1 & y_1 & z_1\\
+x_2 & y_2 & z_2\\
+ & \vdots & \\
+x_N & y_N & z_N
+\end{matrix}
+\right]
+\end{align}
+vector of excitation currents $[I_1, I_2, \ldots, I_N]$.
+\\ Output parameters: $\pv{G}(\theta,\phi)$ for the entire array beam.
+\\ \emph{Hint: cf. chapter 10.1.1, 10.3.1}
+\item Write a MATLAB function that computes the phased array excitation vector in order to scan the array to a certain direction.
+\\Input parameters: scan angle $(\theta_0,\phi_0)$.
+\\Output parameters: excitation vector $[I_1, I_2, \ldots, I_N]$.
+\\ \emph{Hint: cf. chapter 10.1.4,10.3.3}
+\item Using the pattern plotting function of point 3, observe the array pattern of a uniform linear array of 5 dipoles in a side-by-side configuration when: 
+\begin{itemize}
+\item the beam is scanned scanned in the H-plane, element spacing is $d = 2/3\lambda$.
+\item the beam is pointed broadside, element spacing is swept from $d = \lambda/4$ to $4\lambda$
+\end{itemize}
+\end{enumerate}
+
+\section{Report}\label{Rep}
+Report the above results in this LaTeX document (this MSc template report): present it in a narrative way following the above points 1-6, while including and describing the results/plots, include the MATLAB scripts, and present it orally. The work is possible to finish in one week, if not, try to complete as many items as possible.
+
+\section{References}\label{Ref}
+\begin{itemize}
+\item Foundations of Antennas: A Unified Approach, Per-Simon Kildal, 2014
+\item MATLAB, The MathWorks Inc., Natick, MA, 200
+\end{itemize}

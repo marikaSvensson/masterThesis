@@ -1,0 +1,58 @@
+\chapter{Task 2}
+\label{chapter:task2}
+In this chapter the total radiated power was computed as a function of the far field for the horizontal dipole, with a chosen polarization, that was considered in chapter \ref{chapter:task1}. Initially the theory regarding the radiated power will be presented, then the results from the computations will be shown. 
+
+\section{Theory}
+The total radiated power can be evaluated by considering the co- and cross-polarizations, which are defined as 
+\begin{equation}
+\hat{co} = cos(\phi - \epsilon) \hat{\theta} - sin(\phi - \epsilon)\hat{\phi}
+\end{equation} 
+and
+\begin{equation}
+\hat{xp} = -sin(\phi - \epsilon) \hat{\theta} - cos(\phi - \epsilon)\hat{\phi}
+\end{equation}
+Where $\epsilon$ can be chosen to achieve the different polarizations. In order to achieve a linear  x polarization we set $\epsilon$ = 0 which gives us 
+\begin{align}
+&\hat{co} = cos(\phi)\hat{\theta} - sin(\phi)\hat{\phi} \\
+&\hat{co} = -sin(\phi)\hat{\theta} - cos(\phi)\hat{\phi}.
+\end{align}
+To get the y polarization $\epsilon$ is set to $\pi/2$, giving the expression 
+\begin{align}
+&\hat{co} = cos(\phi-\pi/2)\hat{\theta} - sin(\phi-\pi/2)\hat{\phi} \\
+&\hat{co} = -sin(\phi-\pi/2)\hat{\theta} - cos(\phi-\pi/2)\hat{\phi}.
+\end{align}
+For RHC we polarization vectors become  
+\begin{align}
+&\hat{co} = e^{-j\phi}/\sqrt{2}(\hat{\theta} - j\hat{\phi}) \\
+&\hat{xp} = e^{j\phi}/\sqrt{2}(\hat{\theta} + j)\hat{\phi}
+\end{align}
+and for LHC
+\begin{align}
+&\hat{co} = e^{j\phi}/\sqrt{2}(\hat{\theta} + j\hat{\phi}) \\
+&\hat{xp} = e^{-j\phi}/\sqrt{2}(\hat{\theta} - j)\hat{\phi}.
+\end{align}
+The total radiated power is defined to be 
+\begin{equation}
+P_{rad} = \int \int_{\text{far field sphere}}(\langle\mathbf{W}\rangle \cdot \hat{r})dA
+\end{equation}
+which can be rewritten in spherical coordinates giving the expression 
+\begin{equation}
+P_{rad} = \int_{0}^{2\pi} \int_{0}^{\pi} (\langle\mathbf{W}\rangle \cdot \hat{r})r^2sin\theta d\theta d\phi.
+\end{equation}
+The total radiated power can then be computed by integrating over the sphere of the squared norm of the far , i.e. 
+\begin{equation}
+P_{rad} =\frac{1}{2 \eta} \int_0^{2\pi} d\phi \int_0^{\pi} d\theta sin(\theta)(|G_{co}|^2 + |G_{xp}|^2).
+\end{equation}
+$\eta$ can be set to $120\pi \Omega$ is room temperature. 
+The integration can easily be calculated with the trapez  method or the midpoint method in order to get a numerical result. In order to get the co- and cross- polar parts of the far field function we simply multiply it with the conjugate of the co- and cross- polar vectors, i.e.
+\begin{align}
+& G_{co}  = \mathbf{G}\cdot \hat{co}^* \\
+& G_{xp}  = \mathbf{G}\cdot \hat{xp}^*.
+\end{align}
+Where we must choose a specific polarization in order to get the numerical results.\cite{kildal2000foundations}
+   
+
+\section{Results}
+The MATLAB code for this task can be viewed in \ref{section:task2.m}. The numerical result of the total radiated power was 9.5984 W, with y, x, LHC and RHC polarization. The excitation current was chosen to be unity A for this task.
+
+
